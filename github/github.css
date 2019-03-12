@@ -15,7 +15,14 @@
 }
 
 .avatarName p {
-
+  font-size: 34px;
+  color: #1e3a68;
+  text-shadow:
+    -1px -1px 0 #fef,
+    1px -1px 0 #fef,
+    -1px 1px 0 #fef,
+    1px 1px 0 #fef;
+  margin-top: 10px;
 }
 
 .avatarName {

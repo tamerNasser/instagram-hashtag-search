@@ -1,40 +1,41 @@
 
 .containerDev {
-  opacity: 30%;
-  margin:0 auto;
-  max-height: auto;
   display: grid;
   grid-template-rows: auto auto;
+  opacity: 30%;
+  /* margin:0 auto;
+  justify-content: center; */
 }
-
+.grid-item{
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+  /* justify-content:center; */
+}
 .avatar {
   justify-content: center;
-  width: 80%;
-  margin: 0 auto;
+  align-self: center;
+  width: 100%;
+  margin:0 auto;
   border: 1px solid #ddd;
   border-radius: 50%;
-  padding: 5px;
+  border-width: 10px;
+  border-color: black;
 }
-
+.avatarName{
+  align-content: center;
+}
 .avatarName p {
-  font-size: 34px;
-  color: #1e3a68;
-  text-shadow:
+  font-size: 120px;
+  color: #000;
+  /* text-shadow:
     -1px -1px 0 #fef,
     1px -1px 0 #fef,
     -1px 1px 0 #fef,
-    1px 1px 0 #fef;
+    1px 1px 0 #fef; */
   margin-top: 10px;
 }
-
-.avatarName {
-  font-size: 18px;
-  font-style: oblique;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-  width: 35%;
-  height: 10%;
-  justify-content: center;
-  display: block;
+.avatarInfo p{
+    font-size: 70px;
+    margin-top: 5px;
 }

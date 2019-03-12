@@ -1,16 +1,18 @@
 
 .containerDev {
-  display: grid;
-  grid-template-rows: auto auto;
+  opacity: 30%;
   margin:0 auto;
   max-height: auto;
+  display: grid;
+  grid-template-rows: auto auto;
 }
+
 .avatar {
   justify-content: center;
   width: 80%;
   margin: 0 auto;
   border: 1px solid #ddd;
-  border-radius: 100%;
+  border-radius: 50%;
   padding: 5px;
 }
 
@@ -26,5 +28,13 @@
 }
 
 .avatarName {
-
+  font-size: 18px;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  width: 35%;
+  height: 10%;
+  justify-content: center;
+  display: block;
 }

@@ -14,13 +14,14 @@
 .grid-item p {
   display: flex;
   justify-content: center;
+
 }
 
 .avatar {
   align-self: center;
   width: 100%;
   border: 1px solid #ddd;
-  border-radius: 50%;
+  border-radius: 100%;
   border-width: 10px;
   border-color: black;
 }
@@ -30,7 +31,7 @@
 }
 
 .avatarName p {
-  font-size: 100px;
+  font-size: 90px;
   color: #000;
   margin: 0;
 }
@@ -38,6 +39,7 @@
 .avatarInfo p {
   margin: 0;
   font-size: 50px;
+    padding-bottom: 30px;
 }
 
 .avatarInfo :nth-child(2) {

@@ -25,7 +25,7 @@ function getUserData(username) {
      // console.log(userData);
      userID.innerHTML = userData.name;
      userAvatar.src = userData.avatar_url;
-     userDesc.innerHTML = userData.bio;
+     userData.bio!==null ? userDesc.innerHTML = '"'+userData.bio+'"' : null;
      userEmail.textContent= userData.email;
  });
 }

@@ -1,0 +1,17 @@
+#mainContainer{
+  display:grid;
+  grid-template-rows: 24% 24% 49%;
+  grid-row-gap: 1%;
+
+}
+.container{
+  background-color: grey;
+
+}
+nav{
+   background-color: rgb(100, 145, 175, 0.8);
+}
+nav div{
+  display: inline-block;
+  font-size: 40px;
+}

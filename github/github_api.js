@@ -19,12 +19,14 @@ function getUserData(username) {
   let userID = document.getElementById(username).getElementsByClassName("avatarName")[0].getElementsByTagName("p")[0];
   let userAvatar = document.getElementById(username).getElementsByClassName("avatar")[0];
   let userDesc = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[1];
+  let userEmail = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[5];
   // console.log(userDesc);
   getData(GITHUB_API + username + GITHUB_TOKEN, function(userData) {
      // console.log(userData);
      userID.innerHTML = userData.name;
      userAvatar.src = userData.avatar_url;
      userDesc.innerHTML = userData.bio;
+     userEmail.textContent= userData.email;
  });
 }
 
@@ -38,7 +40,7 @@ function getUserReposData(username){
           if (!isthere(d[i].language, reposArr)) {
             reposArr.push(d[i].language);
             console.log(d[i].language);
-            userLangs.innerHTML+=" "+d[i].language;
+            userLangs.innerHTML+=d[i].language+" / ";
           }
         }
 

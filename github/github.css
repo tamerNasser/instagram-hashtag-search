@@ -1,0 +1,23 @@
+
+.containerDev {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin:0 auto;
+  max-height: auto;
+}
+.avatar {
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.avatarName p {
+
+}
+
+.avatarName {
+
+}

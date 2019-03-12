@@ -1,5 +1,5 @@
 const GITHUB_API = 'https://api.github.com/users/';
-const GITHUB_TOKEN = '?access_token=509f683e1543825fe7942aaac4cf6c2995a44657';
+const GITHUB_TOKEN = '';
 
 
 function getData(url, cb) {

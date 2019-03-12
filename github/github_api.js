@@ -40,7 +40,7 @@ function getUserReposData(username){
           if (!isthere(d[i].language, reposArr)) {
             reposArr.push(d[i].language);
             console.log(d[i].language);
-            userLangs.innerHTML+=d[i].language+" / ";
+            userLangs.innerHTML+=d[i].language+"/ ";
           }
         }
 

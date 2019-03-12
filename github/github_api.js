@@ -1,5 +1,5 @@
-const GITHUB_API = 'https://api.github.com/users/';
-const GITHUB_TOKEN = '?access_token=509f683e1543825fe7942aaac4cf6c2995a44657';
+const GITHUB_API = config.githubApi;
+const GITHUB_TOKEN = config.accessToken;
 
 
 function getData(url, cb) {
@@ -19,14 +19,44 @@ function getUserData(username) {
   let userID = document.getElementById(username).getElementsByClassName("avatarName")[0].getElementsByTagName("p")[0];
   let userAvatar = document.getElementById(username).getElementsByClassName("avatar")[0];
   let userDesc = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[1];
-  console.log(userDesc);
+  // console.log(userDesc);
   getData(GITHUB_API + username + GITHUB_TOKEN, function(userData) {
-     console.log(userData);
+     // console.log(userData);
      userID.innerHTML = userData.name;
      userAvatar.src = userData.avatar_url;
      userDesc.innerHTML = userData.bio;
- })
+ });
 }
 
+function getUserReposData(username){
+  let userLangs = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[3];
+    try {
+      let reposArr = [];
+      getData(GITHUB_API + username + '/repos'+ GITHUB_TOKEN, function(d) {
+        // console.log(d.length);
+        for (let i = 0; i < d.length; i++) {
+          if (!isthere(d[i].language, reposArr)) {
+            reposArr.push(d[i].language);
+            console.log(d[i].language);
+            userLangs.innerHTML+=" "+d[i].language;
+          }
+        }
+
+      });
+
+    } catch (ex) {
+      console.log(ex);
+    }
+}
+
+function isthere(lang, arr) {
+  if (arr.length <= 0) return false;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === lang) return true;
+  }
+  return false;
+}
+getUserReposData("tamernasser");
+getUserReposData("majdya");
 getUserData("tamernasser");
 getUserData("majdya");

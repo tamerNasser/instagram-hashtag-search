@@ -1,22 +1,19 @@
-
 .containerDev {
   display: grid;
   grid-template-rows: auto auto;
-  opacity: 30%;
-  /* margin:0 auto;
-  justify-content: center; */
 }
 .grid-item{
   width: 75%;
   margin: 0 auto;
   height: 100%;
-  /* justify-content:center; */
+}
+.grid-item p{
+  display: flex;
+  justify-content: center;
 }
 .avatar {
-  justify-content: center;
   align-self: center;
   width: 100%;
-  margin:0 auto;
   border: 1px solid #ddd;
   border-radius: 50%;
   border-width: 10px;
@@ -28,14 +25,10 @@
 .avatarName p {
   font-size: 120px;
   color: #000;
-  /* text-shadow:
-    -1px -1px 0 #fef,
-    1px -1px 0 #fef,
-    -1px 1px 0 #fef,
-    1px 1px 0 #fef; */
-  margin-top: 10px;
+  margin: 0;
 }
+
 .avatarInfo p{
-    font-size: 70px;
-    margin-top: 5px;
+  margin: 0;
+  font-size: 55px;
 }

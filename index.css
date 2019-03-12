@@ -20,3 +20,7 @@ nav div{
   grid-template-rows: auto auto;
   grid-row-gap: 5px;
 }
+.containerEmails{
+  display: grid;
+  grid-template-rows: auto auto;
+}

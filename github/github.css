@@ -2,16 +2,20 @@
   display: grid;
   grid-template-rows: auto auto;
 }
-.grid-item{
+
+.grid-item {
   width: 75%;
   margin: 0 auto;
   height: 100%;
   margin-bottom: 30px;
+  font-family: Courier;
 }
-.grid-item p{
+
+.grid-item p {
   display: flex;
   justify-content: center;
 }
+
 .avatar {
   align-self: center;
   width: 100%;
@@ -20,24 +24,28 @@
   border-width: 10px;
   border-color: black;
 }
-.avatarName{
+
+.avatarName {
   align-content: center;
 }
+
 .avatarName p {
-  font-size: 120px;
+  font-size: 100px;
   color: #000;
   margin: 0;
 }
 
-.avatarInfo p{
+.avatarInfo p {
   margin: 0;
-  font-size: 55px;
+  font-size: 50px;
 }
-.avatarInfo :nth-child(2){
+
+.avatarInfo :nth-child(2) {
   margin: 0;
   font-size: 40px;
 }
-.avatarInfo :nth-child(3){
+
+.avatarInfo :nth-child(3) {
   margin: 0;
-  font-size: 70px;
+  font-size: 40px;
 }

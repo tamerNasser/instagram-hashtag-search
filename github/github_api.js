@@ -1,7 +1,6 @@
 const GITHUB_API = config.githubApi;
 const GITHUB_TOKEN = config.accessToken;
 
-
 function getData(url, cb) {
   fetch(url)
     .then(function(response) {
@@ -20,35 +19,30 @@ function getUserData(username) {
   let userAvatar = document.getElementById(username).getElementsByClassName("avatar")[0];
   let userDesc = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[1];
   let userEmail = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[5];
-  // console.log(userDesc);
   getData(GITHUB_API + username + GITHUB_TOKEN, function(userData) {
-     // console.log(userData);
-     userID.innerHTML = userData.name;
-     userAvatar.src = userData.avatar_url;
-     userData.bio!==null ? userDesc.innerHTML = '"'+userData.bio+'"' : null;
-     userEmail.textContent= userData.email;
- });
+    userID.innerHTML = userData.name;
+    userAvatar.src = userData.avatar_url;
+    userData.bio !== null ? userDesc.innerHTML = '"' + userData.bio + '"' : null;
+    userEmail.textContent = userData.email;
+  });
 }
 
-function getUserReposData(username){
+function getUserReposData(username) {
   let userLangs = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[3];
-    try {
-      let reposArr = [];
-      getData(GITHUB_API + username + '/repos'+ GITHUB_TOKEN, function(d) {
-        // console.log(d.length);
-        for (let i = 0; i < d.length; i++) {
-          if (!isthere(d[i].language, reposArr)) {
-            reposArr.push(d[i].language);
-            // console.log(d[i].language);
-            userLangs.innerHTML+=d[i].language+" | ";
-          }
+  try {
+    let reposArr = [];
+    getData(GITHUB_API + username + '/repos' + GITHUB_TOKEN, function(d) {
+      for (let i = 0; i < d.length; i++) {
+        if (!isthere(d[i].language, reposArr)) {
+          reposArr.push(d[i].language);
+          userLangs.innerHTML += d[i].language + " | ";
         }
+      }
+    });
 
-      });
-
-    } catch (ex) {
-      console.log(ex);
-    }
+  } catch (ex) {
+    console.log(ex);
+  }
 }
 
 function isthere(lang, arr) {
@@ -58,6 +52,7 @@ function isthere(lang, arr) {
   }
   return false;
 }
+
 getUserReposData("tamernasser");
 getUserReposData("majdya");
 getUserData("tamernasser");

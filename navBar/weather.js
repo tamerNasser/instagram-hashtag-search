@@ -2,6 +2,7 @@ const WEATHER_API = "http://api.openweathermap.org/data/2.5/weather?q=";
 const API_KEY = "&appid=9481079f5f89f0b72f0027d093f78ed5"
 const CITY_DEFAULT = "Nazareth"
 
+// A function to get temperature using an API.
 function getTemp(city) {
   let ele = document.getElementById("temp");
   fetch(WEATHER_API + city + API_KEY)

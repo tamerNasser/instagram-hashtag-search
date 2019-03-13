@@ -1,26 +1,25 @@
-var day = document.getElementById("day");
-var time = document.getElementById("time");
+let day = document.getElementById("day");
+let time = document.getElementById("time");
 
 //set up the function
 function updateDate() {
-  var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth() + 1; //January is 0!
-  var yyyy = today.getFullYear();
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1; //January is 0!
+  let yyyy = today.getFullYear();
   if (dd < 10) {
     dd = '0' + dd
   }
   if (mm < 10) {
     mm = '0' + mm
   }
+
   today = dd + '/' + mm + '/' + yyyy;
-  console.log(today);
   day.innerText = today;
 }
 
 function updateTime() {
-  var d = new Date();
-  console.log(d.getHours() + ":" + d.getMinutes());
+  let d = new Date();
   time.innerText = d.getHours() + ":" + d.getMinutes();
 }
 

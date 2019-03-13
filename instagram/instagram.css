@@ -37,7 +37,11 @@ input[type="submit"] {
   margin: 8px 20px;
   margin-top: -50px;
 }
-.postItem img{
+.postItem img[alt="post"]{
   width: 300px;
   height: 300px;
+}
+.postItem img[alt="heartIcon"]{
+  width: 42px;
+  height: 42px;
 }

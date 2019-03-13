@@ -1,3 +1,10 @@
+body {
+  background-attachment: fixed;
+  background-image: url("assets/mbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .body-container {
   display: grid;
   /* grid-template-columns: 1fr5; */
@@ -10,19 +17,23 @@
 
 .nav-container {
   display: grid;
-  grid-template-columns: 50% 35% auto;
+  grid-template-columns: 35% 25% auto;
   width: 98%;
-  background-color: rgb(51, 73, 87);
+  background-color: rgba(51, 58, 64, 0.2);
   position: fixed;
-  top: 0;
-  border-radius: 1%;
-  border: 2px solid #578698;
-  height: 5%;
+  top: 1%;
+  border-radius: 25px;
+  border: 2px solid #5b7282;
+  padding: 2%;
+  width: 94%;
+  height: 3%;
 }
 
 nav text, label {
-  color: white;
-  font-size: 130%;
+  font-family: Helvetica;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 110%;
+  text-shadow: 1px 2px 4px #000000;
 }
 
 nav div {
@@ -31,7 +42,10 @@ nav div {
 }
 
 nav a {
-  color: inherit;
+  font-family: Helvetica;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 120%;
+  text-shadow: 1px 2px 4px #000000;
   text-decoration: none;
 }
 

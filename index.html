@@ -1,49 +1,44 @@
 <html>
-  <script type='text/javascript' src='./github/config.js'></script>
+<script type='text/javascript' src='./github/config.js'></script>
 
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" type="text/css" href="github/github.css">
   <link rel="stylesheet" type="text/css" href="instagram/instagram.css">
-  <title></title>
+  <title>Help Me Nigga</title>
 </head>
 
 <body>
 
 
-  <nav>
-    <div id="date">
-      <text id="day" rows="8" cols="80"></text>
-      <text id="time" rows="8" cols="80"></text>
+
+  <div class="body-container">
+    <div class="">
+      <nav class="nav-container">
+        <div id="date">
+          <text id="day" rows="8" cols="80"></text>
+          <text id="time" rows="8" cols="80"></text>
+        </div>
+        <div id="weather">
+          <label for="temp">Temp.</label>
+          <text name="temp" id="temp"></text>
+          <text>℃</text>
+        </div>
+        <div id="contact">
+          <a href="#contacts">Contacts</a>
+        </div>
+      </nav>
     </div>
-
-    <div id="weather">
-      <label for="temp">Tempe.</label>
-      <text name="temp" id="temp"></text>
-      <text>℃</text>
-    </div>
-
-    <div id="contact">
-      contact
-    </div>
-  </nav>
-
-
-
-  <div id="mainContainer">
 
     <div class="containerInstagram">
       <div class="searchContainer">
         <div>
           <input type="text" id="inputHashtag" value="" placeholder="Search..." name="hashtag">
         </div>
-          <input id="btnSearchHashtag" type="submit" value="Search">
-        <div>
-
-        </div>
+        <input id="btnSearchHashtag" type="submit" value="Search">
       </div>
-      <div class="resultsContainer">
 
+      <div class="resultsContainer">
         <div class="resultsRow">
           <div class="postItem">
             <img src="" alt="">
@@ -83,8 +78,7 @@
       </div>
     </div>
 
-
-    <div id="devsInfo" class="containerDev">
+    <div id="contacts" class="contacts">
 
       <div class="grid-item" id="tamernasser">
         <a href="http://www.github.com/tamernasser">
@@ -99,7 +93,6 @@
           <p></p>
         </div>
       </div>
-
       <div class="grid-item" id="majdya">
         <a href="http://www.github.com/majdya"><img src="" alt="avatar" class="avatar"></a>
         <div class="avatarName">
@@ -110,15 +103,19 @@
           <p></p>
         </div>
       </div>
-
     </div>
 
-
   </div>
-  <script src="./weather/weather.js"></script>
-  <script src="./date/date.js"></script>
+
+
+
+
+  <script src="./navBar/weather/weather.js"></script>
+  <script src="./navBar/date/date.js"></script>
   <script type="text/javascript" src="./github/github_api.js"></script>
-    <script type='text/javascript' src='./instagram/apigram.js'></script>
+  <script type='text/javascript' src='./instagram/apigram.js'></script>
+
+
 </body>
 
 </html>

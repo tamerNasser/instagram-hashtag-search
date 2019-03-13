@@ -15,8 +15,3 @@ nav div{
   display: inline-block;
   font-size: 40px;
 }
-.containerInstagram{
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-row-gap: 5px;
-}

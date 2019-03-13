@@ -4,41 +4,81 @@
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" type="text/css" href="github/github.css">
-
-  <title></title>
+  <link rel="stylesheet" type="text/css" href="instagram/instagram.css">
+  <title>Help Me Nigga</title>
 </head>
 
 <body>
 
+
+
   <div class="body-container">
-
-    <nav class="nav-container">
-      <div id="date">
-        <text id="day" rows="8" cols="80"></text>
-        <text id="time" rows="8" cols="80"></text>
-      </div>
-
-      <div id="weather">
-        <label for="temp">Temp.</label>
-        <text name="temp" id="temp"></text>
-        <text>℃</text>
-      </div>
-
-      <div id="contact">
-        <a href="#devsInfo">Contacts</a>
-      </div>
-    </nav>
-
-
-
-    <div class="mainContainer">
-      This should prove my point.
+    <div class="">
+      <nav class="nav-container">
+        <div id="date">
+          <text id="day" rows="8" cols="80"></text>
+          <text id="time" rows="8" cols="80"></text>
+        </div>
+        <div id="weather">
+          <label for="temp">Temp.</label>
+          <text name="temp" id="temp"></text>
+          <text>℃</text>
+        </div>
+        <div id="contact">
+          <a href="#contacts">Contacts</a>
+        </div>
+      </nav>
     </div>
 
+    <div class="containerInstagram">
+      <div class="searchContainer">
+        <div>
+          <input type="text" id="inputHashtag" placeholder="Search..." name="hashtag">
+        </div>
+        <input id="btnSearchHashtag" type="submit" value="Search">
+      </div>
 
+      <div class="resultsContainer">
+        <div class="resultsRow">
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+        </div>
 
+        <div class="resultsRow">
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+        </div>
 
-    <div class="contacts">
+        <div class="resultsRow">
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="contacts" class="contacts">
 
       <div class="grid-item" id="tamernasser">
         <a href="http://www.github.com/tamernasser">
@@ -65,16 +105,17 @@
       </div>
     </div>
 
-
-
-
-
-
   </div>
+
+
+
 
   <script src="./navBar/weather/weather.js"></script>
   <script src="./navBar/date/date.js"></script>
   <script type="text/javascript" src="./github/github_api.js"></script>
+  <script type='text/javascript' src='./instagram/apigram.js'></script>
+
+
 </body>
 
 </html>

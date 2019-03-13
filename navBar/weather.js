@@ -13,6 +13,9 @@ function getTemp(city) {
       console.log(temp);
       ele.innerText = Math.round(temp);
     })
+    .catch(function(error){
+      console.log(error);
+    })
 }
 
 getTemp(CITY_DEFAULT);

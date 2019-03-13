@@ -30,10 +30,6 @@ function searchLink() {
 // Gets the top posts related to the hashtag and set it in the DOM.
 function setPostsInfo(hashtag) {
   let arrItems = Array.from(document.getElementsByClassName("postItem"));
-  console.log(arrItems);
-  console.log(arrItems[0]);
-  console.log(arrItems[0].childNodes);
-
   getData(INSTAGRAM_API + hashtag + INSTAGRAM_API_QUERY, function(data) {
     let arrPosts = data.graphql.hashtag.edge_hashtag_to_top_posts.edges;
     for (let i = 0; i < arrItems.length; i++) {
@@ -42,8 +38,6 @@ function setPostsInfo(hashtag) {
       arrItems[i].childNodes[3].innerHTML += " " + arrPosts[i].node.edge_liked_by.count;
       arrItems[i].childNodes[5].innerHTML = arrPosts[i].node.edge_media_to_caption.edges[0].node.text;
     }
-    // console.log(data.graphql.hashtag.edge_hashtag_to_top_posts.edges[0].node.edge_liked_by.count);
-    // postsArr = data.graphql.hashtag;
   })
   for (let i = 0; i < arrItems.length; i++) {
     arrItems[i].childNodes[5].innerHTML = reduceString(arrItems[i].childNodes[5].innerHTML);

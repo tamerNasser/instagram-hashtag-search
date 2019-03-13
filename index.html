@@ -1,9 +1,10 @@
 <html>
   <script type='text/javascript' src='./github/config.js'></script>
+
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" type="text/css" href="github/github.css">
-
+  <link rel="stylesheet" type="text/css" href="instagram/instagram.css">
   <title></title>
 </head>
 
@@ -30,16 +31,56 @@
 
 
   <div id="mainContainer">
-    <div id="userGmail" class="containerGmail">
-      <div id=login>
-        login
+
+    <div class="containerInstagram">
+      <div class="searchContainer">
+        <div>
+          <input type="text" id="inputHashtag" placeholder="Search..." name="hashtag">
+        </div>
+          <input id="btnSearchHashtag" type="submit" value="Search">
+        <div>
+
+        </div>
       </div>
-      <div id="userInfo">
-        user info
+      <div class="resultsContainer">
+
+        <div class="resultsRow">
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+        </div>
+
+        <div class="resultsRow">
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+        </div>
+
+        <div class="resultsRow">
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+          <div class="postItem">
+            <img src="" alt="">
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div id="userEmails" class="containerEmails">
-      useremails
     </div>
 
 
@@ -77,6 +118,7 @@
   <script src="./weather/weather.js"></script>
   <script src="./date/date.js"></script>
   <script type="text/javascript" src="./github/github_api.js"></script>
+    <script type='text/javascript' src='./instagram/apigram.js'></script>
 </body>
 
 </html>

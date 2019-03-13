@@ -1,0 +1,29 @@
+#mainContainer {
+  display: grid;
+  grid-template-rows: 24% 24% auto;
+  grid-row-gap: 5px;
+}
+
+#mainContainer div {
+  background-color: grey;
+}
+
+nav {
+  background-color: #324b6d;
+}
+
+nav div {
+  display: inline-block;
+  font-size: 40px;
+}
+
+.containerGmail {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 5px;
+}
+
+.containerEmails {
+  display: grid;
+  grid-template-rows: auto auto;
+}

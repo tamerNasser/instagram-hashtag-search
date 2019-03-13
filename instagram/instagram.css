@@ -4,6 +4,7 @@
   grid-row-gap: 5px;
 }
 .searchContainer{
+
   display:grid;
   display: grid;
   grid-template-rows: auto;
@@ -14,6 +15,8 @@
   grid-row-gap: 5px;
 }
 .resultsRow{
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-row-gap: 5px;

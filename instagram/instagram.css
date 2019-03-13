@@ -45,3 +45,15 @@ input[type="submit"] {
   width: 42px;
   height: 42px;
 }
+.postItem :nth-child(2){
+font-size: 40px;
+margin-top: 5px;
+}
+.postItem :nth-child(3){
+  font-size: 33px;
+  width: 20ch;
+  height: 70px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

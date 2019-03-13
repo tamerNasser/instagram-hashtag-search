@@ -1,29 +1,27 @@
-.containerDev {
-  display: grid;
-  grid-template-rows: auto auto;
-}
-
 .grid-item {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
-  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5%;
   margin-bottom: 30px;
-  font-family: Courier;
+  font-family: Helvetica;
+  background-color: rgba(54, 55, 65, 0.3);
 }
 
 .grid-item p {
+  margin-top: 4%;
   display: flex;
   justify-content: center;
-
 }
 
 .avatar {
-  align-self: center;
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 100%;
-  border-width: 10px;
-  border-color: black;
+  margin-top: 4%;
+  max-width: 50%;
+  margin-left: 25%;
+  border: 1px solid #70a4be;
+  border-radius: 50%;
+  border-width: 5px;
+  border-color: rgba(100, 140, 170, 0.4);
 }
 
 .avatarName {
@@ -31,23 +29,23 @@
 }
 
 .avatarName p {
-  font-size: 90px;
-  color: #000;
-  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 500%;
+  text-shadow: 1px 2px 4px #353646;
 }
 
 .avatarInfo p {
-  margin: 0;
-  font-size: 50px;
-    padding-bottom: 30px;
+  padding: 5% ;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 280%;
 }
 
-.avatarInfo :nth-child(2) {
-  margin: 0;
-  font-size: 40px;
-}
-
-.avatarInfo :nth-child(3) {
-  margin: 0;
-  font-size: 40px;
-}
+/* .avatarInfo :nth-child(2) {
+  /* margin: 0; */
+/* font-size: 40px; */
+/* } */
+/* .avatarInfo :nth-child(3) { */
+/* margin: 0; */
+/* font-size: 40px; */
+/* } */

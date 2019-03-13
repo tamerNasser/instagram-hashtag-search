@@ -1,6 +1,7 @@
 const GITHUB_API = config.githubApi;
 const GITHUB_TOKEN = config.accessToken;
 
+// Static function to get API response.
 function getData(url, cb) {
   fetch(url)
     .then(function(response) {
@@ -14,6 +15,7 @@ function getData(url, cb) {
     })
 }
 
+// Gets all the info from the API and set it in the DOM.
 function getUserData(username) {
   let userID = document.getElementById(username).getElementsByClassName("avatarName")[0].getElementsByTagName("p")[0];
   let userAvatar = document.getElementById(username).getElementsByClassName("avatar")[0];
@@ -27,6 +29,7 @@ function getUserData(username) {
   });
 }
 
+// Get all data about repos and set the related values in DOM.
 function getUserReposData(username) {
   let userLangs = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[3];
   try {
@@ -45,6 +48,7 @@ function getUserReposData(username) {
   }
 }
 
+// Checks if the the str is included in arr.
 function isthere(lang, arr) {
   if (arr.length <= 0) return false;
   for (let i = 0; i < arr.length; i++) {
@@ -53,6 +57,7 @@ function isthere(lang, arr) {
   return false;
 }
 
+// Call the functions.
 getUserReposData("tamernasser");
 getUserReposData("majdya");
 getUserData("tamernasser");

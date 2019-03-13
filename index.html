@@ -3,6 +3,8 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="navBar/nav.css">
+  <link rel="stylesheet" type="text/css" href="github/github.css">
   <link rel="stylesheet" type="text/css" href="github/github.css">
   <link rel="stylesheet" type="text/css" href="instagram/instagram.css">
   <title>Help Me Nigga</title>
@@ -13,12 +15,8 @@
 
 
   <div class="body-container">
-    <div class="">
+    <div id="nav">
       <nav class="nav-container">
-        <div id="date">
-          <text id="day" rows="8" cols="80"></text>
-          <text id="time" rows="8" cols="80"></text>
-        </div>
         <div id="weather">
           <label for="temp">Temp.</label>
           <text name="temp" id="temp"></text>
@@ -26,6 +24,10 @@
         </div>
         <div id="contact">
           <a href="#contacts">Contacts</a>
+        </div>
+        <div id="date">
+          <text id="day" rows="8" cols="80"></text>
+          <text id="time" rows="8" cols="80"></text>
         </div>
       </nav>
     </div>
@@ -98,6 +100,19 @@
 
     <div id="contacts" class="contacts">
 
+      <div class="grid-item" id="majdya">
+        <a href="http://www.github.com/majdya"><img src="" alt="avatar" class="avatar"></a>
+        <div class="avatarName">
+          <p></p>
+        </div>
+        <div class="avatarInfo">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+
       <div class="grid-item" id="tamernasser">
         <a href="http://www.github.com/tamernasser">
           <img src="" alt="avatar" class="avatar">
@@ -111,16 +126,7 @@
           <p></p>
         </div>
       </div>
-      <div class="grid-item" id="majdya">
-        <a href="http://www.github.com/majdya"><img src="" alt="avatar" class="avatar"></a>
-        <div class="avatarName">
-          <p></p>
-        </div>
-        <div class="avatarInfo">
-          <p></p>
-          <p></p>
-        </div>
-      </div>
+
     </div>
 
   </div>
@@ -128,8 +134,8 @@
 
 
 
-  <script src="./navBar/weather/weather.js"></script>
-  <script src="./navBar/date/date.js"></script>
+  <script src="./navBar/weather.js"></script>
+  <script src="./navBar/date.js"></script>
   <script type="text/javascript" src="./github/github_api.js"></script>
   <script type='text/javascript' src='./instagram/apigram.js'></script>
 

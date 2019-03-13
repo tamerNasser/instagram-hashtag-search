@@ -1,5 +1,6 @@
 const INSTAGRAM_API = 'https://www.instagram.com/explore/tags/';
 const INSTAGRAM_API_QUERY = '/?__a=1';
+const INSTAGRAM_POST_URL = 'https://www.instagram.com/p/';
 
 setPostsInfo('winter');
 
@@ -26,17 +27,29 @@ function searchLink(){
 
 function setPostsInfo(hashtag){
   let arrItems = Array.from(document.getElementsByClassName("postItem"));
-  getData(INSTAGRAM_API+hashtag+INSTAGRAM_API_QUERY,function(data){
-    let arrPosts = data.graphql.hashtag.edge_hashtag_to_top_posts.edges;
-    console.log(arrPosts);
-    for(let i=0;i<arrItems.length;i++){
-      arrItems[i].childNodes[1].src = arrPosts[i].node.display_url;
-    }
+  console.log(arrItems);
+  console.log(arrItems[0]);
+  console.log(arrItems[0].childNodes);
 
+  getData(INSTAGRAM_API+hashtag+INSTAGRAM_API_QUERY,function(data){
+  let arrPosts = data.graphql.hashtag.edge_hashtag_to_top_posts.edges;
+    for(let i=0;i<arrItems.length;i++){
+      arrItems[i].childNodes[1].firstChild.src = arrPosts[i].node.display_url;
+      arrItems[i].childNodes[1].href = INSTAGRAM_POST_URL+arrPosts[i].node.shortcode;
+      arrItems[i].childNodes[3].innerHTML+= " "+arrPosts[i].node.edge_liked_by.count;
+      arrItems[i].childNodes[5].innerHTML = arrPosts[i].node.edge_media_to_caption.edges[0].node.text;
+    }
     // console.log(data.graphql.hashtag.edge_hashtag_to_top_posts.edges[0].node.edge_liked_by.count);
     // postsArr = data.graphql.hashtag;
-
   })
+for(let i=0;i<arrItems.length;i++){
+  arrItems[i].childNodes[5].innerHTML = reduceString(arrItems[i].childNodes[5].innerHTML);
+}
 }
 
+
+function reduceString (s){
+  if(s.length>60)return s.subString(0,60).toString();
+  return s.toString();
+};
 searchLink();

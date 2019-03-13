@@ -38,7 +38,7 @@ function getUserReposData(username) {
       for (let i = 0; i < d.length; i++) {
         if (!isthere(d[i].language, reposArr)) {
           reposArr.push(d[i].language);
-          userLangs.innerHTML += d[i].language + " | ";
+          i != d.length ? userLangs.innerHTML += d[i].language + " | " : userLangs.innerHTML += d[i].language;;
         }
       }
     });

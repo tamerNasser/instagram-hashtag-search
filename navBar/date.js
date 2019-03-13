@@ -1,7 +1,7 @@
 let day = document.getElementById("day");
 let time = document.getElementById("time");
 
-//set up the function
+//A function to get the current date and set it in DOM.
 function updateDate() {
   let today = new Date();
   let dd = today.getDate();
@@ -13,19 +13,21 @@ function updateDate() {
   if (mm < 10) {
     mm = '0' + mm
   }
-
   today = dd + '/' + mm + '/' + yyyy;
   day.innerText = today;
 }
 
+//A function to get the current time and set it in DOM.
 function updateTime() {
   let d = new Date();
   time.innerText = d.getHours() + ":" + d.getMinutes();
 }
 
-//trigger the functions
+// Call the functions.
 updateDate();
 updateTime();
+
+// Calling the time function each minute.
 setInterval(function() {
   updateTime();
 }, 60000);

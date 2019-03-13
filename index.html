@@ -1,5 +1,6 @@
 <html>
-  <script type='text/javascript' src='./github/config.js'></script>
+<script type='text/javascript' src='./github/config.js'></script>
+
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" type="text/css" href="github/github.css">
@@ -9,41 +10,35 @@
 
 <body>
 
+  <div class="body-container">
 
-  <nav>
-    <div id="date">
-      <text id="day" rows="8" cols="80"></text>
-      <text id="time" rows="8" cols="80"></text>
-    </div>
-
-    <div id="weather">
-      <label for="temp">Tempe.</label>
-      <text name="temp" id="temp"></text>
-      <text>℃</text>
-    </div>
-
-    <div id="contact">
-      contact
-    </div>
-  </nav>
-
-
-
-  <div id="mainContainer">
-    <div id="userGmail" class="containerGmail">
-      <div id=login>
-        login
+    <nav class="nav-container">
+      <div id="date">
+        <text id="day" rows="8" cols="80"></text>
+        <text id="time" rows="8" cols="80"></text>
       </div>
-      <div id="userInfo">
-        user info
+
+      <div id="weather">
+        <label for="temp">Temp.</label>
+        <text name="temp" id="temp"></text>
+        <text>℃</text>
       </div>
-    </div>
-    <div id="userEmails" class="containerEmails">
-      useremails
+
+      <div id="contact">
+        <a href="#devsInfo">Contacts</a>
+      </div>
+    </nav>
+
+
+
+    <div class="mainContainer">
+      This should prove my point.
     </div>
 
 
-    <div id="devsInfo" class="containerDev">
+
+
+    <div class="contacts">
 
       <div class="grid-item" id="tamernasser">
         <a href="http://www.github.com/tamernasser">
@@ -58,7 +53,6 @@
           <p></p>
         </div>
       </div>
-
       <div class="grid-item" id="majdya">
         <a href="http://www.github.com/majdya"><img src="" alt="avatar" class="avatar"></a>
         <div class="avatarName">
@@ -69,13 +63,17 @@
           <p></p>
         </div>
       </div>
-
     </div>
 
 
+
+
+
+
   </div>
-  <script src="./weather/weather.js"></script>
-  <script src="./date/date.js"></script>
+
+  <script src="./navBar/weather/weather.js"></script>
+  <script src="./navBar/date/date.js"></script>
   <script type="text/javascript" src="./github/github_api.js"></script>
 </body>
 

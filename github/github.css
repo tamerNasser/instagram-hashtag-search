@@ -1,0 +1,53 @@
+.containerDev {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.grid-item {
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 30px;
+  font-family: Courier;
+}
+
+.grid-item p {
+  display: flex;
+  justify-content: center;
+
+}
+
+.avatar {
+  align-self: center;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  border-width: 10px;
+  border-color: black;
+}
+
+.avatarName {
+  align-content: center;
+}
+
+.avatarName p {
+  font-size: 90px;
+  color: #000;
+  margin: 0;
+}
+
+.avatarInfo p {
+  margin: 0;
+  font-size: 50px;
+    padding-bottom: 30px;
+}
+
+.avatarInfo :nth-child(2) {
+  margin: 0;
+  font-size: 40px;
+}
+
+.avatarInfo :nth-child(3) {
+  margin: 0;
+  font-size: 40px;
+}

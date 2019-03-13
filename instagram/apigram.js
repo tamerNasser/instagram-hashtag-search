@@ -1,6 +1,8 @@
 const INSTAGRAM_API = 'https://www.instagram.com/explore/tags/';
 const INSTAGRAM_API_QUERY = '/?__a=1';
 
+setPostsInfo('winter');
+
 function getData(url, cb) {
   fetch(url)
     .then(function(response) {
@@ -14,7 +16,13 @@ function getData(url, cb) {
     })
 }
 
-
+function searchLink(){
+ let input = document.getElementById("inputHashtag");
+ let btnSearch = document.getElementById("btnSearchHashtag");
+ btnSearch.addEventListener("click",function(){
+   setPostsInfo(input.value);
+ });
+}
 
 function setPostsInfo(hashtag){
   let arrItems = Array.from(document.getElementsByClassName("postItem"));
@@ -30,4 +38,5 @@ function setPostsInfo(hashtag){
 
   })
 }
-setPostsInfo('winter');
+
+searchLink();

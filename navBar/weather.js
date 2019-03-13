@@ -1,18 +1,21 @@
-const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
-const APIKEY = "&appid=9481079f5f89f0b72f0027d093f78ed5"
-var city = "Nazareth"
+const WEATHER_API = "http://api.openweathermap.org/data/2.5/weather?q=";
+const API_KEY = "&appid=9481079f5f89f0b72f0027d093f78ed5"
+const CITY_DEFAULT = "Nazareth"
 
+// A function to get temperature using an API.
 function getTemp(city) {
-  var ele = document.getElementById("temp");
-  fetch(URL + city + APIKEY)
+  let ele = document.getElementById("temp");
+  fetch(WEATHER_API + city + API_KEY)
     .then(function(response) {
       return response.json();
     })
     .then(function(data) {
       let temp = data.main.temp - 273.15;
-      console.log(temp);
       ele.innerText = Math.round(temp);
+    })
+    .catch(function(error){
+      console.log(error);
     })
 }
 
-getTemp(city);
+getTemp(CITY_DEFAULT);

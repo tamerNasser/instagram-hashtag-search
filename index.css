@@ -7,10 +7,6 @@ body {
 
 .body-container {
   display: grid;
-  /* grid-template-columns: 1fr5; */
   grid-template-rows: 5% 70% 15%;
-  /* grid-column-gap: 10%; */
   grid-row-gap: 3%;
-  /* justify-items: stretch; */
-  /* align-items: center; */
 }

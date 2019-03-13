@@ -35,17 +35,8 @@
 }
 
 .avatarInfo p {
-  padding: 5% ;
+  padding: 5%;
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.7);
   font-size: 280%;
 }
-
-/* .avatarInfo :nth-child(2) {
-  /* margin: 0; */
-/* font-size: 40px; */
-/* } */
-/* .avatarInfo :nth-child(3) { */
-/* margin: 0; */
-/* font-size: 40px; */
-/* } */

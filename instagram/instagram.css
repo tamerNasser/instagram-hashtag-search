@@ -28,6 +28,9 @@ margin-top: -10%;
   grid-row-gap: 5px;
   justify-content: space-around;
 }
+.postItem{
+  height: 200px;
+}
 input[type=text] {
   width: 250px;;
   font-size: 55px;

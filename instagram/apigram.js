@@ -46,7 +46,7 @@ function setPostsInfo(hashtag) {
 
 // A function to reduce the string length.
 function reduceString(s) {
-  if (s.length > 60) return s.subString(0, 60).toString();
+  if (s.length > 60) return s.substring(0, 60).toString();
   return s.toString();
 };
 

@@ -34,11 +34,15 @@ function getUserReposData(username) {
   let userLangs = document.getElementById(username).getElementsByClassName("avatarInfo")[0].childNodes[3];
   try {
     let reposArr = [];
-    getData(GITHUB_API + username + '/repos' + GITHUB_TOKEN, function(d) {
-      for (let i = 0; i < d.length; i++) {
-        if (!isthere(d[i].language, reposArr)) {
-          reposArr.push(d[i].language);
-          i != d.length ? userLangs.innerHTML += d[i].language + " | " : userLangs.innerHTML += d[i].language;;
+    getData(GITHUB_API + username + '/repos' + GITHUB_TOKEN, function(data) {
+      for (let i = 0; i < data.length; i++) {
+        if (!isthere(data[i].language, reposArr)) {
+          reposArr.push(data[i].language);
+          if (i != 0) {
+            userLangs.innerHTML += " | "+data[i].language;
+          } else {
+            userLangs.innerHTML += data[i].language;
+          }
         }
       }
     });

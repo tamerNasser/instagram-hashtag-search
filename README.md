@@ -1,4 +1,6 @@
-# Welcome to out site src :
+# Welcome to our site src :
+
+## This was my project for the founders & coders week 2 of the boot camp  - its pair programing boot camp - i were paierd with @tamerNasser up to this point, but all the changes in my repo are done by me 
 
 ### Once you at the site you can finde the weather on the top left , time and date at the top right , and a contact us button at the top mid that will take you for the team who build the site.
 

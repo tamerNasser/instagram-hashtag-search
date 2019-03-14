@@ -44,8 +44,15 @@ input[type=text] {
 }
 
 input[type="submit"] {
-  font-size: 55px;
+  font-size: 45px;
   height: 70px;
+  border-color: solid #ddd;
+  border-radius: 6%;
+  text-align: center;
+}
+
+input[type="submit"]:hover{
+  background-color: #999;
 }
 
 .postItem img[alt="post"] {
@@ -75,8 +82,10 @@ input[type="submit"] {
   font-size: 46px;
 }
 #option{
-  font-size: 36px;
-  height: 60px;
+  font-size: 45px;
+  height: 70px;
+  border-radius: 6%;
+  text-align: center;
   margin-left: 5px;
 }
 #option option{

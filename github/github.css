@@ -1,6 +1,7 @@
 .grid-item {
   width: 90%;
   margin: 0 auto;
+  text-align: center;
   border: 1px solid #ddd;
   border-radius: 5%;
   margin-bottom: 30px;
@@ -17,7 +18,6 @@
 .avatar {
   margin-top: 4%;
   max-width: 50%;
-  margin-left: 25%;
   border: 1px solid #70a4be;
   border-radius: 50%;
   border-width: 5px;

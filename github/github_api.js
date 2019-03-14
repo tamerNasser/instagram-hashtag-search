@@ -35,10 +35,14 @@ function getUserReposData(username) {
   try {
     let reposArr = [];
     getData(GITHUB_API + username + '/repos' + GITHUB_TOKEN, function(data) {
-      for (let i = 0; i < d.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         if (!isthere(data[i].language, reposArr)) {
           reposArr.push(data[i].language);
-          i != d.length ? userLangs.innerHTML += data[i].language + " | " : userLangs.innerHTML += data[i].language;;
+          if (i != 0) {
+            userLangs.innerHTML += " | "+data[i].language;
+          } else {
+            userLangs.innerHTML += data[i].language;
+          }
         }
       }
     });

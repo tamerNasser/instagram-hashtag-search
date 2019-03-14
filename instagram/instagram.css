@@ -70,16 +70,17 @@ input[type="submit"] {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-select{
-  height:70px;
-  width: 150px;
-  margin-left: 10px;
-  font-size: 34px;
+.lbl{
+  font-size: 46px;
 }
-select option{
-    font-size: 24px;
+#option{
+  font-size: 36px;
+  height: 60px;
+  margin-left: 5px;
 }
-
+#option option{
+    font-size: 22px;
+}
 /* DESKTOP */
 @media screen and (min-width: 1100px){
 

@@ -42,7 +42,7 @@ function setPostsInfo(hashtag,option) {
       arrItems[i].childNodes[1].firstChild.src = arrPosts[i].node.display_url;
       arrItems[i].childNodes[1].href = INSTAGRAM_POST_URL + arrPosts[i].node.shortcode;
       // console.log(arrPosts[i].node.edge_media_preview_like.count);
-      arrItems[i].childNodes[3].innerHTML += " " + arrPosts[i].node.edge_media_preview_like.count.toString();
+      arrItems[i].childNodes[3].innerHTML ="<img src='instagram/assets/icons/heart.png' alt='heartIcon'>"+ " " + arrPosts[i].node.edge_media_preview_like.count.toString();
       arrItems[i].childNodes[5].innerHTML = arrPosts[i].node.edge_media_to_caption.edges[0].node.text;
     }
   })

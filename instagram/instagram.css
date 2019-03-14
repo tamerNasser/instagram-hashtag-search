@@ -38,7 +38,8 @@
 input[type=text] {
   width: 250px;
   font-size: 55px;
-  border-radius: 15%;
+  border:3px solid #ddd;
+  border-radius: 6%;
   margin-right: 15px;
 }
 

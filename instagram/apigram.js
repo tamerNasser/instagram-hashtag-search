@@ -12,6 +12,7 @@ function searchLink() {
   let btnSearch = document.getElementById("btnSearchHashtag");
   let selectOption = document.getElementById("option");
   btnSearch.addEventListener("click", function() {
+    console.log(selectOption.value);
       setPostsInfo(input.value,selectOption.value);
   });
 }
@@ -21,10 +22,11 @@ function setPostsInfo(hashtag,option) {
   let arrItems = Array.from(document.getElementsByClassName("postItem"));
   getData(INSTAGRAM_API + hashtag + INSTAGRAM_API_QUERY, function(data) {
     let arrPosts;
-    if(option=="Top"){
-    arrPosts = data.graphql.hashtag.edge_hashtag_to_top_posts.edges;
+    if(option=="recent"){
+      arrPosts =  data.graphql.hashtag.edge_hashtag_to_media.edges;
   }else {
-    arrPosts =  data.graphql.hashtag.edge_hashtag_to_media.edges;
+    arrPosts = data.graphql.hashtag.edge_hashtag_to_top_posts.edges;
+
   }
     for (let i = 0; i < arrItems.length; i++) {
       arrItems[i].childNodes[1].firstChild.src = arrPosts[i].node.display_url;

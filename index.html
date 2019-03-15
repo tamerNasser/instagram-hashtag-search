@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div class="body-container">
+  <div class="index-grid">
 
     <div id="nav">
       <nav class="nav-container">
@@ -27,14 +27,16 @@
         </div>
         <div id="date">
           <text id="day" rows="8" cols="80"></text>
+        </div>
+        <div class="time">
           <text id="time" rows="8" cols="80"></text>
         </div>
       </nav>
     </div>
 
-    <div class="containerInstagram">
+    <div class="instagram-grid">
 
-      <div class="searchContainer">
+      <div class="search-grid">
         <div>
           <label class="lbl" for="inputHashtag">#</label>
           <input type="text" id="inputHashtag" placeholder="Search..." name="hashtag">
@@ -46,9 +48,17 @@
         </select>
       </div>
 
-      <div class="resultsContainer">
+
+
+
+
+
+
+
+      <div class="results-grid">
 
         <div class="resultsRow">
+
           <div class="postItem">
             <a href=""><img src="" alt="post"></a>
             <p></p>
@@ -64,6 +74,7 @@
             <p></p>
             <p></p>
           </div>
+
         </div>
 
         <div class="resultsRow">
@@ -105,9 +116,23 @@
         </div>
 
       </div>
+
     </div>
 
-    <div id="contacts" class="contacts">
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="contacts" class="contacts-grid">
+
       <div class="grid-item" id="majdya">
         <a href="http://www.github.com/majdya"><img src="" alt="avatar" class="avatar"></a>
         <div class="avatarName">
@@ -119,7 +144,6 @@
           <p></p>
         </div>
       </div>
-
 
       <div class="grid-item" id="tamernasser">
         <a href="http://www.github.com/tamernasser">
@@ -138,9 +162,6 @@
     </div>
 
   </div>
-
-
-
 
   <script type="text/javascript" src="./navBar/weather.js"></script>
   <script type="text/javascript" src="./navBar/date.js"></script>

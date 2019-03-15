@@ -5,8 +5,8 @@ body {
   background-size: cover;
 }
 
-.body-container {
+.index-grid {
   display: grid;
-  grid-template-rows: 5% 70% 15%;
-  grid-row-gap: 3%;
+  grid-template-rows: 5% 71% 20%;
+  grid-row-gap: 2%;
 }

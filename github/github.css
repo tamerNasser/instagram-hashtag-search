@@ -1,10 +1,16 @@
+
+.contacts-grid{
+  display: grid;
+  grid-column: auto auto;
+  align-items: center;
+  grid-gap: 15%;
+}
 .grid-item {
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 5%;
-  margin-bottom: 30px;
   font-family: Helvetica;
   background-color: rgba(54, 55, 65, 0.3);
 }
